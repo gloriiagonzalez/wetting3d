@@ -6,15 +6,14 @@
       <NumberOfProcessors>1</NumberOfProcessors>
       <DebugOutputFrequency>10</DebugOutputFrequency>
       <!-- <NonParallelModule Name="Potts"/> -->
-      <MCSConversionFactor DisplayName="minute" Units="min">1.0</MCSConversionFactor>
-      <VoxelConversionFactor DisplayName="micrometer" Units="um">2</VoxelConversionFactor>
+   
    </Metadata>
    
    <Potts>
       
       <!-- Basic properties of CPM (GGH) algorithm -->
       <Dimensions x="100" y="100" z="100"/>
-      <Steps>2000</Steps>
+      <Steps>1000</Steps>
       <Temperature>10.0</Temperature>
       <NeighborOrder>3</NeighborOrder>
       <LatticeType>Hexagonal</LatticeType>
@@ -29,7 +28,7 @@
    </Plugin>
    
    <Plugin Name="Surface">
-      <SurfaceEnergyParameters CellType="cells" LambdaSurface="0.25" TargetSurface="100"/>
+      <SurfaceEnergyParameters CellType="cells" LambdaSurface="0.75" TargetSurface="150"/>
    </Plugin>
    
    <Plugin Name="Volume"/>

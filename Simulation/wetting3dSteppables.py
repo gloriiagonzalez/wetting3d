@@ -12,7 +12,7 @@ class wetting3dSteppable(SteppableBasePy):
         """
         Called before MCS=0 while building the initial simulation
         """
-        self.file = open(r"C:\CompuCell3D\MYPRO\wetting3d\djwc15.txt", "w")
+        self.file = open(r"C:\CompuCell3D\MYPRO\wetting3d\jwc15.txt", "w")
         #self.file=open("C:\CompuCell3D\MYPRO\wetting3d\jwc15.txt", "w")
         self.file.write("MCS Volumen AContact r h theta\n")
         self.file.flush()   # <-- force write NOW before anything else
@@ -37,7 +37,7 @@ class wetting3dSteppable(SteppableBasePy):
 
             #cell.targetVolume = cell.volume
             cell.targetVolume = 25.0
-            cell.lambdaVolume = 4.0
+            cell.lambdaVolume = 2.0
 
         for cell in self.cell_list:
 
