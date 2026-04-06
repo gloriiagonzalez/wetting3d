@@ -4,22 +4,22 @@
 
 #define PI 3.14159265358979323846
 
-// Cardano: solve h^3 + p*h + q = 0  (one real root when p > 0)
+
 double cardano(double p, double q) {
     double D = (q/2.0)*(q/2.0) + (p/3.0)*(p/3.0)*(p/3.0);
     return cbrt(-q/2.0 + sqrt(D)) + cbrt(-q/2.0 - sqrt(D));
 }
 
 int main() {
-    FILE *infile = fopen("dattos_wetting.txt", "r");
+    FILE *infile = fopen("entrada.txt", "r"); //sustituir "entrada.txt" por el fichero de datos
     if (!infile) {
-        printf("Error: no se puede abrir dattos_wetting.txt\n");
+        printf("Error: no se puede abrir\n");
         return 1;
     }
 
     FILE *outfile = fopen("contact.txt", "w");
     if (!outfile) {
-        printf("Error: no se puede crear datos_theta.txt\n");
+        printf("Error: no se puede crear\n");
         return 1;
     }
 
@@ -36,13 +36,13 @@ int main() {
     while (fgets(line, sizeof(line), infile)) {
         if (sscanf(line, "%d %lf %lf", &mcs, &V, &A) != 3) continue;
 
-        // equivalent contact radius
+     
         r = sqrt(A / PI);
 
-        // Cardano: solve h^3 + 3r^2*h - 6V/pi = 0
+       
         h = cardano(3.0*r*r, -6.0*V/PI);
 
-        // contact angle
+
         theta_rad = 2.0 * atan(h / r);
         theta_deg = theta_rad * 180.0 / PI;
 
