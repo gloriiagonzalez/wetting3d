@@ -1,0 +1,18 @@
+set terminal pngcairo enhanced font "Arial,12" size 900,600
+set output "contact_multi.png"
+
+set grid
+
+set xrange [0:4500]
+
+set xlabel "MCstep"
+set ylabel "{/Symbol q} (°)"
+
+set key outside
+
+plot \
+"res_a.txt" u 1:7 with lines lc rgb "#e41a1c" lw 2 title "a", \
+"res_b.txt" u 1:7 with lines lc rgb "#377eb8" lw 2 title "b", \
+"res_c.txt" u 1:7 with lines lc rgb "#4daf4a" lw 2 title "c", \
+"res_d.txt" u 1:7 with lines lc rgb "#ff7f00" lw 2 title "d", \
+"res_e.txt" u 1:7 with lines lc rgb "#984ea3" lw 2 title "e"

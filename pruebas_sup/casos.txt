@@ -1,0 +1,20 @@
+a:
+   <Plugin Name="Surface">
+      <SurfaceEnergyParameters CellType="cells" LambdaSurface="0.5" TargetSurface="150"/>
+   </Plugin>
+b:
+   <Plugin Name="Surface">
+      <SurfaceEnergyParameters CellType="cells" LambdaSurface="0.25" TargetSurface="150"/>
+   </Plugin>
+c:
+   <Plugin Name="Surface">
+      <SurfaceEnergyParameters CellType="cells" LambdaSurface="0.25" TargetSurface="350"/>
+   </Plugin>
+d:
+   <Plugin Name="Surface">
+      <SurfaceEnergyParameters CellType="cells" LambdaSurface="0.05" TargetSurface="350"/>
+   </Plugin>
+e:
+   <Plugin Name="Surface">
+      <SurfaceEnergyParameters CellType="cells" LambdaSurface="0.05" TargetSurface="150"/>
+   </Plugin>
