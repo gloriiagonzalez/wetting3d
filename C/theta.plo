@@ -1,0 +1,13 @@
+set terminal pngcairo enhanced font "Arial,12" size 900,600
+set output "contact_jwc7p5.png"
+
+set grid 
+
+set title "J_{wall-cells} = 7.5"
+
+set xlabel "MCstep"
+set ylabel "{/Symbol q} (°)"
+
+set key off
+
+plot "contact.txt" u 1:7 with lines lc rgb "red" lw 2
