@@ -13,9 +13,9 @@ class wetting3dSteppable(SteppableBasePy):
         Called before MCS=0 while building the initial simulation
         """
         self.file = open(r"C:\CompuCell3D\MYPRO\wetting3d\jwc15.txt", "w")
-        #self.file=open("C:\CompuCell3D\MYPRO\wetting3d\jwc15.txt", "w")
+  
         self.file.write("MCS Volumen AContact r h theta\n")
-        self.file.flush()   # <-- force write NOW before anything else
+        self.file.flush()   
         print("FILE OK")
         
         wall_cell = self.new_cell(self.WALL)
